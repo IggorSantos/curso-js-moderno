@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>Const</head>
+    <body>        
+    </body>
+    <script>
+        const article = {
+            title: "Aprendendo template string",
+            intro: "Breve explicação da criação de fragmentos HTML com template literal",
+            tags: ['ES6', 'js', 'html'],
+            author: 'Igor'
+        }
+
+        function renderAuthor(name){
+            return name ? name : 'unknow'
+        }
+
+        const markup = `
+        <article>
+            <header>
+                <h1>${article.title}</h1>
+            </header>
+            <section>
+                <p>${article.intro}</p>
+            </section>
+            <footer>
+                <ul>
+                    ${article.tags.map((item) => `<li>${item}</li>`).join('')}
+                </ul>
+                <p>Author: ${renderAuthor(article.author)}
+            </footer>
+        <article>`
+
+        document.body.innerHTML = markup
+    </script>
+</html>
