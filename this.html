@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head>Const</head>
+    <body>      
+        <button id="btn">Click me</button>  
+        <button id="btn2">Click me</button> 
+    </body>
+    <script>
+        const btn = document.getElementById('btn')
+        btn.addEventListener('click', function() {
+            console.log(this)
+        })
+        //O this da function pega o contexto do button
+
+        const btn2 = document.getElementById('btn2')
+        btn2.addEventListener('click', () => {
+            console.log(this)
+        })
+        //Já a arrow function pega todo o contexto ou seja a window
+    </script>
+</html>
