@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>Const</head>
+ 
+    <body>        
+    </body>
+    <script>
+        const city = 'Dublin';
+        const something = 'Guiness';
+        const otherThing = 'Leprechauns';
+
+        function green(template, ...values){
+            return template.reduce((accumulator,part,i) => {
+                return `
+                ${accumulator}
+                <strong>${values[i-1].toUpperCase()}</strong>
+                ${part}              
+                `
+            })
+        }
+        
+        const ireland = green`I live in ${city} city of ${something} and ${otherThing}`
+        document.body.innerHTML = ireland
+    </script>
+</html>
