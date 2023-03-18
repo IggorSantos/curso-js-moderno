@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>Const</head>
+    <body>        
+    </body>
+    <script>
+        ireland = {
+            live: 'Dublin',
+            love: 'Gasway'
+        }
+
+        const text = "Eu amo " + ireland.love + " e vivo em " + ireland.live
+        console.log(text)
+        //Assim que faziamos antes do ES6
+
+        const textES6 = `Eu amo ${ireland.love} e vivo em ${ireland.live}`
+        console.log(textES6)
+        //Assim que fazemos no ES6
+
+        const fruits = "Orange" + `\n` + "banana" + `\n` + "apple"
+        console.log(fruits)
+        //Assim que faziamos strings com quebra de linha
+
+        const fruitsES6 =
+         `Orange
+        Banana
+        Apple`
+        console.log(fruitsES6)
+        //Assim que fazemos com ES6
+    </script>
+</html>
