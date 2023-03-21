@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>Const</head>
+    <body>        
+    </body>
+    <script>
+        let firstName = 'Igor';
+        let sureName = 'Santos';
+        let age = 28;
+
+        const person = {
+            firstName: firstName,
+            sureName: sureName,
+            age: age,
+
+            hello: function(){
+                console.log("Hello")
+            }
+        }
+
+        const person2 = {
+            firstName,
+            sureName,
+            age,
+
+            hello(){
+                console.log("Hello")
+            }
+        }
+        //Foram incluidos alguns shorthands no ES6 um deles é esta nova forma de escrever objetos
+        //Se a propriedade e a variavel tiverem o mesmo nome podemos deixar só a variavel
+
+        //Temos também essa nova forma de escrever funções não precisando escrever a palavra function
+
+        console.log(person)
+        person.hello()
+        console.log(person2)
+        person2.hello()
+
+    </script>
+</html>
