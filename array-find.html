@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>Const</head>
+    <body>            
+    </body>
+    <script>
+      const list = [1,-5,2,-3];
+      const underZero = list.find(x => x < 0)
+      console.log(underZero)
+      //Método array find retorna o primeiro elemento de um array que passou por um determinado teste logico
+      //Se nenhum valor satisfazer o teste lógico ele retorn undefined
+
+      const underZeroIndex = list.findIndex(x => x < 0)
+      console.log(underZeroIndex)
+        //Método array findIndex retorna o index do primeiro elemento de um array que passou por um determinado teste logico
+      //Se nenhum valor satisfazer o teste lógico ele retorna -1
+      
+      newArr = new Array(5)
+      console.log(newArr.fill(5))
+      //Método fill completa o array com um determinado valor
+
+
+    </script>
+</html>
