@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>Destructuring</head>
+    <body>            
+    </body>
+    <script>
+      const data = {
+        name: 'Igor',
+        surename: 'Santos',
+        social: {
+            facebook: '/igorsantos',
+            twitter: '@igorsantos'
+        }
+      }
+
+      const {name,surename} = data
+      //Pegando do objeto
+
+      const {facebook} = data.social
+      //Pegando do objeto dentro do objeto
+
+      const {twitter:tt} = data.social
+      //Modificando o nome da variavel que vai receber o valor
+
+      const {city = 'Dublin'} = data.social
+      //Adicionado um valor default para a variavel
+
+      console.log(name)
+      console.log(facebook)
+      console.log(tt)
+      console.log(city)
+
+
+      const arr = ['Igor', 28]
+      const [nome] = arr
+      console.log(nome)
+      //Para fazer o destruturing num array trocamos as chaves pelos colchetes
+      //Ele vai pegar os valores pela oredm do array
+      
+
+
+    </script>
+</html>
