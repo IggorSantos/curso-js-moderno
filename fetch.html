@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head>Promises</head>
+    <body>            
+    </body>
+    <script>
+         let posts = fetch("https://api.github.com/users/iggorsantos")
+         let bio = '';
+
+         
+         posts
+         .then((data) => data.json())
+         .then((data) => bio = data.bio)
+
+         setTimeout(() => {
+            console.log(bio)
+         },3000)         
+
+
+    </script>
+</html>
