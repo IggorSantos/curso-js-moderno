@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>Promises</head>
+    <body>            
+    </body>
+    <script>
+          let currency = new Promise((resolve,reject) => {
+            setTimeout(() => {
+                resolve({currency: 'euro', value: 3.50});
+            },5000)                     
+         })    
+         
+         let countries = new Promise((resolve,reject) => {
+            setTimeout(() => {
+                resolve(['Ireland', 'England', 'Scotland']) 
+            },200)                     
+         })    
+         
+         /*Promise
+         .all([currency,countries])
+         .then(response => console.log(response))*/
+
+         Promise
+         .race([currency,countries])
+         .then(response => console.log(response))
+
+
+    </script>
+</html>
