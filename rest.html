@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+    <head>Spread</head>
+    <body>            
+    </body>
+    <script>
+        function multiply(mult, ...args){
+            return args.map((arg) => {
+                return arg * mult
+            })         
+        }
+
+        console.log(multiply(2,3,5,4))
+//Com os rest params o args se torna um array com todos os parametros mandados não importando a quantidade
+
+
+    </script>
+</html>
