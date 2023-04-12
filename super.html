@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>Extends</head>
+    <body>            
+    </body>
+    <script>
+        class Animal{
+            constructor(name){                
+                this.name = name
+            }
+
+            hello(){
+                console.log(this.sound)
+            }
+           
+        }
+
+        class Dog extends Animal{
+            constructor(name,sound){
+                super(name)
+                this.sound = sound
+            }
+
+            bark(){
+                console.log(`${this.sound}`)
+            }
+        }
+
+        const dog = new Dog('dog', 'auau')
+        const elephant = new Animal('Dumbo', 'eee')
+        
+
+  
+
+
+
+    </script>
+</html>

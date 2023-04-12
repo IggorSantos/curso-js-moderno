@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>Class</head>
+    <body>            
+    </body>
+    <script>
+        class Animal{
+            constructor(kind,sound){
+                this.kind = kind;
+                this.sound = sound
+            }
+
+            hello(){
+                console.log(this.sound)
+            }
+
+            static info(){
+                console.log("Informação")
+            }
+            //Métodos estáticos não podem ser acessados fora da classe
+
+            get name(){
+                console.log(`${this.kind}`)
+            }
+
+            set nickname(nick){
+                this.nick = nick
+            }
+            
+        }
+
+        const dog = new Animal('dog', 'auau')
+        const cat = new Animal('cat', 'meow')
+
+  
+
+
+
+    </script>
+</html>
