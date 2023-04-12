@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>Symbol</head>
+    <body>            
+    </body>
+    <script>
+        let foo = Symbol('name')
+
+        let obj = {
+            [Symbol('name')]: 'Igor',
+            [Symbol('age')]: 28,
+            city: 'Irecê'
+        }
+
+        let simbolos = Object.getOwnPropertySymbols(obj)
+        console.log(simbolos)
+
+        console.log(Object.keys(obj))
+        console.log(foo)    
+
+  
+
+
+
+    </script>
+</html>
