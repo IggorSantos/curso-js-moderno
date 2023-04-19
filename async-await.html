@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>Async/await</head>
+    <body>            
+    </body>
+    <script>
+        async function getRepos(){
+            try{
+                let response = await fetch("https://api.github.com/users/iggorsantos/repos")
+                let repos = await response.json()
+
+                return repos.map((repo) => {
+                    console.log(repo.name)
+                })    
+            }
+            catch{
+                console.error("We got a error")
+            }
+              
+        }
+
+        getRepos()
+         
+         
+
+         
+           
+
+
+    </script>
+</html>
