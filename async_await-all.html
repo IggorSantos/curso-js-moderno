@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>Async/await</head>
+    <body>            
+    </body>
+    <script>
+        async function getRepos(users){
+            try{
+                let promises = users.map((user) => fetch(`https://api.github.com/users/${user}/repos`))
+                
+                
+                
+                let people = await Promise.all([promises])
+                let peopleJson = await people.json()
+                console.log(peopleJson)
+            }
+            catch{
+                console.error("We got a error")
+            }
+              
+        }
+
+        getRepos(['iggorsantos'])   
+    
+    </script>
+</html>
